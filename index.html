@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f8faf7" />
+  <meta name="description" content="A calm, interactive 12-week roadmap from MERN fundamentals to reliable AI applications. Learn only what you need, then build." />
+  <title>The Builder's Path — Your 12-Week Roadmap</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#roadmap">Skip to roadmap</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a href="#top" class="wordmark" aria-label="The Builder's Path home">
+        <span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M9 9h18v18H9z" stroke="currentColor" stroke-width="1.6" rx="3"/><circle cx="9" cy="9" r="3.3" fill="currentColor"/><circle cx="27" cy="9" r="3.3" fill="currentColor"/><circle cx="9" cy="27" r="3.3" fill="currentColor"/><circle cx="27" cy="27" r="3.3" fill="currentColor"/><path d="M13 24L24 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <span class="brand-copy"><strong>the builder's path</strong><small>a roadmap for what comes next</small></span>
+      </a>
+      <div class="header-right"><span class="quiet-badge"><span class="status-dot"></span> Designed for 3–4h / day</span><button id="resetBtn" class="text-button" type="button" title="Reset saved progress">Reset progress</button></div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-grid" aria-hidden="true"></div><div class="hero-orbit orbit-one" aria-hidden="true"></div><div class="hero-orbit orbit-two" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <span class="eyebrow on-dark"><span class="sparkle">✳</span> YOUR PERSONAL LEARNING MAP <span class="eyebrow-line"></span> 12 WEEKS</span>
+          <h1 id="heroTitle">Build things<br><em>that think.</em></h1>
+          <p>From CRUD to real AI products. A little deeper each week, without trying to learn everything at once.</p>
+          <button class="hero-cta" id="continueBtn" type="button"><span>Pick up where you left off</span><span class="cta-arrow" aria-hidden="true">↗</span></button>
+        </div>
+        <div class="hero-progress-wrap">
+          <div class="progress-disc" id="progressDisc" role="img" aria-label="0 percent complete">
+            <div class="progress-disc-inner"><span class="progress-disc-label">YOUR PROGRESS</span><strong id="heroPercent">0%</strong><span class="progress-disc-small" id="heroFraction">0 of 36 steps</span></div>
+          </div>
+          <div class="hero-progress-foot"><span class="mini-star">✦</span><span>Small steps.<br>Real skills.</span></div>
+        </div>
+      </section>
+
+      <section class="quick-strip" aria-label="Roadmap at a glance">
+        <div class="quick-stat"><span class="quick-icon">◷</span><span><strong>12 weeks</strong><small>one focused direction</small></span></div>
+        <div class="quick-stat"><span class="quick-icon">◈</span><span><strong>36 checkpoints</strong><small>know exactly when to move on</small></span></div>
+        <div class="quick-stat"><span class="quick-icon">◇</span><span><strong>1 real project</strong><small>grows with you each week</small></span></div>
+      </section>
+
+      <section class="path-section" id="roadmap" aria-labelledby="pathTitle">
+        <div class="section-header"><div><span class="eyebrow section-kicker">THE JOURNEY, NOT THE SYLLABUS</span><h2 id="pathTitle">Your path, <span class="soft-underline">week by week.</span></h2><p>Just open the next card. The details will be there when you need them.</p></div><div class="path-progress"><span id="completedLabel">0 / 36</span><small>steps finished</small></div></div>
+        <div class="filter-bar" aria-label="Filter roadmap by phase">
+          <div class="phase-filters" id="phaseFilters" role="group" aria-label="Choose a phase"><button class="filter-pill selected" data-filter="all" type="button" aria-pressed="true">All phases</button><button class="filter-pill" data-filter="foundation" type="button" aria-pressed="false">01 · Foundations</button><button class="filter-pill" data-filter="systems" type="button" aria-pressed="false">02 · Systems</button><button class="filter-pill" data-filter="agents" type="button" aria-pressed="false">03 · AI agents</button><button class="filter-pill" data-filter="ship" type="button" aria-pressed="false">04 · Ship it</button></div>
+          <span class="filter-hint"><span aria-hidden="true">↘</span> Click any week to explore</span>
+        </div>
+        <div id="phaseContainer" class="phase-container" aria-live="polite"></div>
+      </section>
+
+      <aside class="closing-note" aria-labelledby="closingTitle">
+        <div class="closing-mark" aria-hidden="true">✳</div>
+        <div><h2 id="closingTitle">You don't need to know it all.</h2><p>Learn enough to build, test, and explain the next thing. That's the whole philosophy of this roadmap.</p></div>
+        <button id="bottomContinue" type="button" class="closing-button">Your next step <span aria-hidden="true">↗</span></button>
+      </aside>
+    </main>
+    <footer class="site-footer"><span>THE BUILDER'S PATH <span class="footer-dot">•</span> MADE FOR PROGRESS, NOT PRESSURE</span><span>Saved locally on this device <span aria-hidden="true">↗</span></span></footer>
+  </div>
+
+  <dialog id="weekDialog" class="week-dialog" aria-labelledby="dialogTitle">
+    <div class="dialog-layout">
+      <div class="dialog-header"><span id="dialogCrumb" class="dialog-crumb">ROADMAP / WEEK 01</span><button id="dialogClose" class="close-button" type="button" aria-label="Close dialog">×</button></div>
+      <div id="dialogBody" class="dialog-body"></div>
+    </div>
+  </dialog>
+  <div role="status" aria-live="polite" id="toast" class="toast"></div>
+</body>
+</html>
